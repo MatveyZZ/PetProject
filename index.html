@@ -7,35 +7,49 @@
     <title>Calculate</title>
 </head>
 <body>
+    <!-- Основной контейнер калькулятора -->
     <div class="calc">
+        <!-- Экран калькулятора -->
         <div class="calc-screen">
             <p>0</p>
         </div>
-        <div class="buttons">
-            <div class="btn ac bg-grey">ac</div>
-            <div class="btn plus minus bg-grey">+/-</div>
-            <div class="btn percent bg-grey">%</div>
-            <div class="btn division bg-orange">/</div>
 
+        <!-- Контейнер с кнопками -->
+        <div class="buttons">
+            <!-- Кнопка "AC" - сброс -->
+            <div class="btn ac bg-grey">AC</div>
+            <!-- Кнопка изменения знака (+/-) -->
+            <div class="btn plus minus bg-grey">+/-</div>
+            <!-- Кнопка процента (%) -->
+            <div class="btn percent bg-grey">%</div>
+            <!-- Кнопка деления (÷) -->
+            <div class="btn division bg-orange">÷</div>
+
+            <!-- Цифры и операторы -->
+            <!-- Кнопки цифр 7, 8, 9 и умножение (×) -->
             <div class="btn seven">7</div>
             <div class="btn eigth">8</div>
             <div class="btn nine">9</div>
-            <div class="btn myltiply bg-orange">X</div>
+            <div class="btn myltiply bg-orange">×</div>
 
+            <!-- Кнопки цифр 4, 5, 6 и вычитание (-) -->
             <div class="btn four">4</div>
             <div class="btn five">5</div>
             <div class="btn six">6</div>
             <div class="btn minus bg-orange">-</div>
 
+            <!-- Кнопки цифр 1, 2, 3 и сложение (+) -->
             <div class="btn one">1</div>
             <div class="btn two">2</div>
             <div class="btn three">3</div>
             <div class="btn plus bg-orange">+</div>
 
+            <!-- Кнопки цифры 0, десятичная точка и равно (=) -->
             <div class="btn zero">0</div>
-            <div class="btn dot">.</div>
+            <div class="btn dot">,</div>
             <div class="btn equal bg-orange">=</div>
         </div>
     </div>
+    <script src="script.js"></script> <!-- Подключение внешнего файла с логикой калькулятора -->
 </body>
 </html>

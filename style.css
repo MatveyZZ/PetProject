@@ -1,31 +1,47 @@
+/* Общие стили для body */
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    margin: 25px;
+}
+
+/* Стили калькулятора */
 .calc {
     margin: 50px auto;
     width: 300px;
     height: 500px;
+    /* рамка отключена */
     /* border: 1px solid #000; */
     border-radius: 20px;
-    background: #000;
-    color: #fff;
-    font-family: Arial, Helvetica, sans-serif;
+    background: #000; /* черный фон */
+    color: #fff; /* белый цвет текста */
     padding: 18px;
-    box-shadow: 4px 4px 4px #4f4f4f;
+    box-shadow: 4px 4px 4px #4f4f4f; /* тень */
 }
 
+/* Экран калькулятора */
 .calc-screen {
     height: 125px;
     padding: 10px;
     display: grid;
-    justify-items: end;
-    align-items: end;
+    justify-items: end; /* выравнивание по правому краю */
+    align-items: end; /* вертикальное выравнивание по низу */
     margin-bottom: 25px;
 }
 
+/* Текст на экране */
 .calc-screen p {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+                 Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-weight: 600;        /* полужирный */
+    font-size: 4rem;         /* примерный размер */
+    letter-spacing: 0.02em;  /* чуть увеличенный межбуквенный интервал */
+    -webkit-font-smoothing: antialiased; /* сглаживание шрифта */
+    -moz-osx-font-smoothing: grayscale;
     text-align: right;
-    font-size: 4rem;
     margin: 0;
 }
 
+/* Контейнер кнопок с сеткой */
 .buttons {
     display: grid;
     grid-template-areas: 
@@ -34,40 +50,63 @@
     "four five six minus"
     "one two three plus"
     "zero zero dot equal";
-    grid-gap: 7px;
-    justify-items: center;
+    grid-gap: 7px; /* отступы между кнопками */
+    justify-items: center; /* выравнивание по центру по горизонтали */
+    font-weight: 600; /* жирность текста */
 }
 
+/* Общие стили для кнопок */
 .btn {
     width: 60px;
     height: 60px;
-    background: #333;
-    border-radius: 50%;
+    background: #333; /* темно-серый фон */
+    border-radius: 50%; /* круглые кнопки */
     text-align: center;
-    line-height: 60px;
+    line-height: 60px; /* вертикальное выравнивание текста по центру */
     font-size: 1.5rem;
-    cursor: pointer;
-    user-select: none;
+    cursor: pointer; /* курсор указатель при наведении */
+    user-select: none; /* запрет выделения текста */
 }
 
+/* Особый стиль для кнопки "0" */
 .btn.zero {
-    grid-area: zero;
-    width: 100%;
-    border-radius: 34px;
+    grid-area: zero; /* позиционирование в сетке */
+    width: 100%; /* занимает две колонки */
+    border-radius: 34px; /* более округлая форма */
+    text-align: left;       /* выравнивание текста по левому краю */
+    padding-left: 30px;     /* отступ слева для сдвига символа "0" */
+    box-sizing: border-box; /* чтобы padding не изменял общую ширину */
 }
 
+/* Класс для контейнера с отступом слева */
+.container {
+    text-align: left;
+    padding-left: 27px;
+}
+
+/* Эффект наведения на кнопку */
 .btn:hover {
     filter: brightness(120%);
 }
 
+/* Активное состояние кнопки */
+.btn.active {
+    background-color: #fff !important; /* белый фон */
+    color: #ff9501 !important; /* оранжевый цвет текста */
+}
+
+/* Нажатое состояние кнопки */
 .btn:active {
     filter: brightness(90%);
 }
 
+/* Стили для кнопок с серым фоном */
 .btn.bg-grey {
     background: #a6a6a6;
+    color: #000; /* черный текст */
 }
 
+/* Стили для кнопок с оранжевым фоном */
 .btn.bg-orange {
     background: #ff9501;
 }
